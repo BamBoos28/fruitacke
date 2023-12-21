@@ -2,7 +2,7 @@
     <div class="container px-0">
         <nav class="navbar navbar-light bg-white navbar-expand-xl">
             <a href="index.html" class="navbar-brand">
-                <h1 class="text-primary display-6">JOY Cake</h1>
+                <h1 class="text-primary display-6">JOY Bakery</h1>
             </a>
             <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarCollapse">
@@ -10,8 +10,8 @@
             </button>
             <div class="collapse navbar-collapse bg-white" id="navbarCollapse">
                 <div class="navbar-nav mx-auto">
-                    <a href="index.php" class="nav-item nav-link active">Home</a>
-                    <a href="" class="nav-item nav-link">Catalog</a>
+                    <a href="index.php" class="nav-item nav-link">Home</a>
+                    <a href="catalog.php" class="nav-item nav-link">Catalog</a>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
                     <!-- <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
