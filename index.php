@@ -16,7 +16,7 @@
 <div class="container-fluid py-5 mb-5 hero-header">
     <div class="container py-5">
         <div class="row g-5 align-items-center">
-            <div class="col-md-12 col-lg-7">
+            <div class="col-md-12 col-lg-7" style="text-shadow: 0 0 1em wheat;">
                 <h4 class="mb-3 text-secondary">100% Homemade Bakery</h4>
                 <h1 class="mb-5 display-3 text-primary">Menjual Bakery dengan Kualitas Premium</h1>
             </div>
