@@ -121,14 +121,13 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 <img src="img/product/<?= $produk['gambar']; ?>" class="img-fluid rounded w-100" alt="">
                             </div>
                             <div class="col-6">
-                                <a href="./details.php" class="h4">
+                                <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>" class="h5">
                                     <?= $produk['nama_produk']; ?>
                                 </a>
                                 <hr>
-                                <h4 class="mb-3">Rp.
-                                    <?= $produk['harga'] ?>
-                                </h4>
-                                <a href="./details.php"
+                                <h5 class="mb-3">Rp. <?= number_format($produk['harga'], 2, ",", ".") ?>
+                                </h5>
+                                <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                     class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                         class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                             </div>
@@ -136,103 +135,6 @@ while ($row = mysqli_fetch_assoc($result)) {
                     </div>
                 </div>
             <?php endforeach; ?>
-            <!-- <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/bestSeller/b-kroisan.png" class="img-fluid rounded w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="./details.php" class="h4">Coissant</a>
-                            <hr>
-                            <h4 class="mb-3">Rp. 25.000,00</h4>
-                            <a href="./details.php"
-                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/bestSeller/b-pizza.png" class="img-fluid rounded w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="h4">Pizza</a>
-                            <hr>
-                            <h4 class="mb-3">Rp. 25.000,00</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/bestSeller/c-cheese.png" class="img-fluid rounded w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="h4">Cheese Cake</a>
-                            <hr>
-                            <h4 class="mb-3">Rp. 25.000,00</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/bestSeller/c-coklat.png" class="img-fluid rounded w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="h4">Chocolate Cake</a>
-                            <hr>
-                            <h4 class="mb-3">Rp. 25.000,00</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/bestSeller/c-strawberry.png" class="img-fluid rounded w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="h4">Strawberry Cake</a>
-                            <hr>
-                            <h4 class="mb-3">Rp. 25.000,00</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/bestSeller/d-nut.png" class="img-fluid rounded w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="h4">Peanut Donut</a>
-                            <hr>
-                            <h4 class="mb-3">Rp. 25.000,00</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
     </div>
 </div>
