@@ -5,26 +5,18 @@
     <div class="container py-5">
         <div class="text-center mx-auto mb-5" style="max-width: 700px;">
             <h1 class="display-4">Bestseller Products</h1>
-            <p>Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks
-                reasonable.</p>
         </div>
         <div class="row g-4">
             <div class="col-lg-6 col-xl-4">
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="img/best-product-1.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="img/bestSeller/b-kroisan.png" class="img-fluid rounded w-100" alt="">
                         </div>
                         <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
+                            <a href="#" class="h4">Coissant</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
@@ -35,18 +27,44 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="img/best-product-2.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="img/bestSeller/b-pizza.png" class="img-fluid rounded w-100" alt="">
                         </div>
                         <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
+                            <a href="#" class="h4">Pizza</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="img/bestSeller/c-cheese.png" class="img-fluid rounded w-100" alt="">
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h4">Cheese Cake</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
+                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="img/bestSeller/c-coklat.png" class="img-fluid rounded w-100" alt="">
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="h4">Chocolate Cake</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
@@ -57,18 +75,12 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="img/best-product-3.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="img/bestSeller/c-strawberry.png" class="img-fluid rounded w-100" alt="">
                         </div>
                         <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
+                            <a href="#" class="h4">Strawberry Cake</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
@@ -79,137 +91,15 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="img/best-product-4.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="img/bestSeller/d-nut.png" class="img-fluid rounded w-100" alt="">
                         </div>
                         <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
+                            <a href="#" class="h4">Peanut Donut</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/best-product-5.jpg" class="img-fluid rounded-circle w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/best-product-6.jpg" class="img-fluid rounded-circle w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="text-center">
-                    <img src="img/fruite-item-1.jpg" class="img-fluid rounded" alt="">
-                    <div class="py-4">
-                        <a href="#" class="h5">Organic Tomato</a>
-                        <div class="d-flex my-3 justify-content-center">
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4 class="mb-3">3.12 $</h4>
-                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="text-center">
-                    <img src="img/fruite-item-2.jpg" class="img-fluid rounded" alt="">
-                    <div class="py-4">
-                        <a href="#" class="h5">Organic Tomato</a>
-                        <div class="d-flex my-3 justify-content-center">
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4 class="mb-3">3.12 $</h4>
-                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="text-center">
-                    <img src="img/fruite-item-3.jpg" class="img-fluid rounded" alt="">
-                    <div class="py-4">
-                        <a href="#" class="h5">Organic Tomato</a>
-                        <div class="d-flex my-3 justify-content-center">
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4 class="mb-3">3.12 $</h4>
-                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-lg-6 col-xl-3">
-                <div class="text-center">
-                    <img src="img/fruite-item-4.jpg" class="img-fluid rounded" alt="">
-                    <div class="py-2">
-                        <a href="#" class="h5">Organic Tomato</a>
-                        <div class="d-flex my-3 justify-content-center">
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star text-primary"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                        <h4 class="mb-3">3.12 $</h4>
-                        <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                     </div>
                 </div>
             </div>
@@ -218,39 +108,35 @@
 </div>
 <!-- Bestsaler Product End -->
 
+
 <!-- Fruits Shop Start-->
 <div class="container-fluid fruite py-5">
     <div class="container py-5">
         <div class="tab-class text-center">
             <div class="row g-4">
                 <div class="col-lg-4 text-start">
-                    <h1>Our Organic Products</h1>
+                    <h1>Katalog Menu</h1>
                 </div>
                 <div class="col-lg-8 text-end">
                     <ul class="nav nav-pills d-inline-flex text-center mb-5">
                         <li class="nav-item">
                             <a class="d-flex m-2 py-2 bg-light rounded-pill active" data-bs-toggle="pill" href="#tab-1">
-                                <span class="text-dark" style="width: 130px;">All Products</span>
+                                <span class="text-dark" style="width: 130px;">All Menu</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex py-2 m-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-2">
-                                <span class="text-dark" style="width: 130px;">Vegetables</span>
+                                <span class="text-dark" style="width: 130px;">Kue</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-3">
-                                <span class="text-dark" style="width: 130px;">Fruits</span>
+                                <span class="text-dark" style="width: 130px;">Roti</span>
                             </a>
                         </li>
                         <li class="nav-item">
                             <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                                <span class="text-dark" style="width: 130px;">Bread</span>
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-5">
-                                <span class="text-dark" style="width: 130px;">Meat</span>
+                                <span class="text-dark" style="width: 130px;">Donut</span>
                             </a>
                         </li>
                     </ul>

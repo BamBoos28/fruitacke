@@ -1,3 +1,17 @@
+<?php
+require("db/conn.php");
+session_start();
+
+$result = mysqli_query($conn, "SELECT * FROM produk");
+$rows = [];
+// $filter = "semua";
+while ($row = mysqli_fetch_assoc($result)) {
+    if ($row['best'] == 1) {
+        $rows[] = $row;
+    }
+}
+?>
+
 <?php include("./comp/header.php"); ?>
 
 <!-- Spinner Start -->
@@ -99,22 +113,52 @@
             <h1 class="display-4">Bestseller Products</h1>
         </div>
         <div class="row g-4">
+            <?php foreach ($rows as $produk): ?>
+                <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="img/product/<?= $produk['gambar']; ?>" class="img-fluid rounded w-100" alt="">
+                        </div>
+                        <div class="col-6">
+                            <a href="./details.php" class="h4"><?= $produk['nama_produk']; ?></a>
+                            <hr>
+                            <h4 class="mb-3">Rp.<?= $produk['harga'] ?></h4>
+                            <a href="./details.php"
+                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <?php endforeach; ?>
+            <!-- <div class="col-lg-6 col-xl-4">
+                <div class="p-4 rounded bg-light">
+                    <div class="row align-items-center">
+                        <div class="col-6">
+                            <img src="img/bestSeller/b-kroisan.png" class="img-fluid rounded w-100" alt="">
+                        </div>
+                        <div class="col-6">
+                            <a href="./details.php" class="h4">Coissant</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
+                            <a href="./details.php"
+                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-lg-6 col-xl-4">
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="img/best-product-1.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="img/bestSeller/b-pizza.png" class="img-fluid rounded w-100" alt="">
                         </div>
                         <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
+                            <a href="#" class="h4">Pizza</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
@@ -125,18 +169,12 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="img/best-product-2.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="img/bestSeller/c-cheese.png" class="img-fluid rounded w-100" alt="">
                         </div>
                         <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
+                            <a href="#" class="h4">Cheese Cake</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
@@ -147,18 +185,12 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="img/best-product-3.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="img/bestSeller/c-coklat.png" class="img-fluid rounded w-100" alt="">
                         </div>
                         <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
+                            <a href="#" class="h4">Chocolate Cake</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
@@ -169,18 +201,12 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="img/best-product-4.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="img/bestSeller/c-strawberry.png" class="img-fluid rounded w-100" alt="">
                         </div>
                         <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
+                            <a href="#" class="h4">Strawberry Cake</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
@@ -191,46 +217,18 @@
                 <div class="p-4 rounded bg-light">
                     <div class="row align-items-center">
                         <div class="col-6">
-                            <img src="img/best-product-5.jpg" class="img-fluid rounded-circle w-100" alt="">
+                            <img src="img/bestSeller/d-nut.png" class="img-fluid rounded w-100" alt="">
                         </div>
                         <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
+                            <a href="#" class="h4">Peanut Donut</a>
+                            <hr>
+                            <h4 class="mb-3">Rp. 25.000,00</h4>
                             <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                     class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/best-product-6.jpg" class="img-fluid rounded-circle w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="#" class="h5">Organic Tomato</a>
-                            <div class="d-flex my-3">
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star text-primary"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <h4 class="mb-3">3.12 $</h4>
-                            <a href="#" class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
