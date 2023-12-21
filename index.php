@@ -115,22 +115,26 @@ while ($row = mysqli_fetch_assoc($result)) {
         <div class="row g-4">
             <?php foreach ($rows as $produk): ?>
                 <div class="col-lg-6 col-xl-4">
-                <div class="p-4 rounded bg-light">
-                    <div class="row align-items-center">
-                        <div class="col-6">
-                            <img src="img/product/<?= $produk['gambar']; ?>" class="img-fluid rounded w-100" alt="">
-                        </div>
-                        <div class="col-6">
-                            <a href="./details.php" class="h4"><?= $produk['nama_produk']; ?></a>
-                            <hr>
-                            <h4 class="mb-3">Rp.<?= $produk['harga'] ?></h4>
-                            <a href="./details.php"
-                                class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                    class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                    <div class="p-4 rounded bg-light">
+                        <div class="row align-items-center">
+                            <div class="col-6">
+                                <img src="img/product/<?= $produk['gambar']; ?>" class="img-fluid rounded w-100" alt="">
+                            </div>
+                            <div class="col-6">
+                                <a href="./details.php" class="h4">
+                                    <?= $produk['nama_produk']; ?>
+                                </a>
+                                <hr>
+                                <h4 class="mb-3">Rp.
+                                    <?= $produk['harga'] ?>
+                                </h4>
+                                <a href="./details.php"
+                                    class="btn border border-secondary rounded-pill px-3 text-primary"><i
+                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             <?php endforeach; ?>
             <!-- <div class="col-lg-6 col-xl-4">
                 <div class="p-4 rounded bg-light">
