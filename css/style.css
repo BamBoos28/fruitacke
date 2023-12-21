@@ -184,8 +184,14 @@
     background-size: cover;
 }
 
+.hero-header .carousel-item img{
+    object-fit: cover;
+    height: 100%;
+}
+
 .carousel-item {
     position: relative;
+    height: 24em;
 }
 
 .carousel-item a {
