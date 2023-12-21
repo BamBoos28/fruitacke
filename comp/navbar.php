@@ -12,7 +12,7 @@
                 <div class="navbar-nav mx-auto">
                     <a href="index.php" class="nav-item nav-link">Home</a>
                     <a href="catalog.php" class="nav-item nav-link">Catalog</a>
-                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <a href="contact.php" class="nav-item nav-link">Contact</a>
                     <!-- <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                                 <div class="dropdown-menu m-0 bg-secondary rounded-0">

@@ -52,7 +52,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                                     <?= $produk['nama_produk']; ?>
                                 </a>
                                 <hr>
-                                <h5 class="mb-3">Rp. <?= number_format($produk['harga'], 2, ",", ".") ?>
+                                <h5 class="mb-3">Rp.
+                                    <?= number_format($produk['harga'], 2, ",", ".") ?>
                                 </h5>
                                 <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                     class="btn border border-secondary rounded-pill text-primary"><i
@@ -123,8 +124,9 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                 </h5>
                                                 <hr>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. <?= number_format($produk['harga'], 2, ",", ".") ?>
-                                                    </p>
+                                                    <div class="text-dark mt-2">Rp.
+                                                        <?= number_format($produk['harga'], 2, ",", ".") ?>
+                                                    </div>
                                                     <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                                             class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -142,7 +144,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class="row g-4">
                         <div class="col-lg-12">
                             <div class="row g-4">
-                                <?php foreach ($kue as $produk): ?>
+                            <?php foreach ($kue as $produk): ?>
                                     <div class="col-md-6 col-lg-4 col-xl-3">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img border border-secondary">
@@ -159,8 +161,9 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                 </h5>
                                                 <hr>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. <?= number_format($produk['harga'], 2, ",", ".") ?>
-                                                    </p>
+                                                    <div class="text-dark mt-2">Rp.
+                                                        <?= number_format($produk['harga'], 2, ",", ".") ?>
+                                                    </div>
                                                     <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                                             class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -178,7 +181,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class="row g-4">
                         <div class="col-lg-12">
                             <div class="row g-4">
-                                <?php foreach ($roti as $produk): ?>
+                            <?php foreach ($roti as $produk): ?>
                                     <div class="col-md-6 col-lg-4 col-xl-3">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img border border-secondary">
@@ -195,8 +198,9 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                 </h5>
                                                 <hr>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. <?= number_format($produk['harga'], 2, ",", ".") ?>
-                                                    </p>
+                                                    <div class="text-dark mt-2">Rp.
+                                                        <?= number_format($produk['harga'], 2, ",", ".") ?>
+                                                    </div>
                                                     <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                                             class="fa fa-shopping-bag me-2 text-primary"></i> Add to
@@ -214,7 +218,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class="row g-4">
                         <div class="col-lg-12">
                             <div class="row g-4">
-                                <?php foreach ($donat as $produk): ?>
+                            <?php foreach ($donat as $produk): ?>
                                     <div class="col-md-6 col-lg-4 col-xl-3">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img border border-secondary">
@@ -231,8 +235,9 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                 </h5>
                                                 <hr>
                                                 <div class="d-flex justify-content-between flex-lg-wrap">
-                                                    <p class="text-dark fs-5 fw-bold mb-0">Rp. <?= number_format($produk['harga'], 2, ",", ".") ?>
-                                                    </p>
+                                                    <div class="text-dark mt-2">Rp.
+                                                        <?= number_format($produk['harga'], 2, ",", ".") ?>
+                                                    </div>
                                                     <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
                                                             class="fa fa-shopping-bag me-2 text-primary"></i> Add to
