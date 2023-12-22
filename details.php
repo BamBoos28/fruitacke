@@ -69,7 +69,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                             </div>
                         </div>
                         <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i
-                                class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                class="fa fa-shopping-bag me-2 text-primary"></i>  Buy</a>
                     </div>
                 </div>
             </div>
@@ -90,7 +90,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <div class="d-flex justify-content-between flex-lg-wrap">
                                 <div class="text-dark mt-1">Rp. <?= number_format($produk['harga'], 2, ",", ".") ?></div>
                                 <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                        class="fa fa-shopping-bag me-2 text-primary"></i>  Buy</a>
                             </div>
                         </div>
                     </div>

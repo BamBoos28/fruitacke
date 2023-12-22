@@ -57,7 +57,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                 </h5>
                                 <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                     class="btn border border-secondary rounded-pill text-primary"><i
-                                        class="fa fa-shopping-bag me-2 text-primary"></i> Add to cart</a>
+                                        class="fa fa-shopping-bag me-2 text-primary"></i>   Buy</a>
                             </div>
                         </div>
                     </div>
@@ -129,8 +129,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                     </div>
                                                     <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                            class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                        cart</a>
+                                                            class="fa fa-shopping-bag me-2 text-primary"></i> Buy</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -166,8 +165,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                     </div>
                                                     <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                            class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                        cart</a>
+                                                            class="fa fa-shopping-bag me-2 text-primary"></i> 
+                                                         Buy</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -203,8 +202,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                     </div>
                                                     <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                            class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                        cart</a>
+                                                            class="fa fa-shopping-bag me-2 text-primary"></i> 
+                                                         Buy</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -240,8 +239,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                                                     </div>
                                                     <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                                         class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                                            class="fa fa-shopping-bag me-2 text-primary"></i> Add to
-                                                        cart</a>
+                                                            class="fa fa-shopping-bag me-2 text-primary"></i> 
+                                                         Buy</a>
                                                 </div>
                                             </div>
                                         </div>
