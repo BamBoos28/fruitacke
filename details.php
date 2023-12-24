@@ -1,6 +1,6 @@
 <?php
 // fetch_product.php
-
+session_start();
 // Kode untuk menghubungkan ke database
 include("./db/conn.php");
 
@@ -22,6 +22,17 @@ while ($row = mysqli_fetch_assoc($result)) {
         $rows[] = $row;
     }
 }
+
+if (isset($_POST['tambahPesanan'])) {
+    $jumlah_pesanan = $_POST['jumlahPesanan'];
+
+    if (isset($_SESSION['pesanan'][$id_produk])) {
+        $_SESSION['pesanan'][$id_produk] += $jumlah_pesanan;
+    } else {
+        $_SESSION['pesanan'][$id_produk] = $jumlah_pesanan;
+    }
+    echo $_SESSION['pesanan'][$id_produk];
+}
 ?>
 
 
@@ -42,7 +53,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                             </a>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    <form action="" class="col-lg-6" method="post">
                         <h4 class="fw-bold mb-3">
                             <?= $id_details['nama_produk']; ?>
                         </h4>
@@ -56,21 +67,13 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <?= $id_details['deskripsi_produk']; ?>
                         </p>
                         <div class="input-group quantity mb-5" style="width: 100px;">
-                            <div class="input-group-btn">
-                                <button class="btn btn-sm btn-minus rounded-circle bg-light border">
-                                    <i class="fa fa-minus"></i>
-                                </button>
-                            </div>
-                            <input type="text" class="form-control form-control-sm text-center border-0" value="1">
-                            <div class="input-group-btn">
-                                <button class="btn btn-sm btn-plus rounded-circle bg-light border">
-                                    <i class="fa fa-plus"></i>
-                                </button>
-                            </div>
+                            <input name="jumlahPesanan" type="text"
+                                class="border border-secondary form-control form-control-sm text-center" value="1">
                         </div>
                         <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i
-                                class="fa fa-shopping-bag me-2 text-primary"></i>  Buy</a>
-                    </div>
+                                class="fa fa-shopping-bag me-2 text-primary"></i> <input type="submit"
+                                name="tambahPesanan" value="Buy" class="border border-secondary rounded-pill"></a>
+                    </form>
                 </div>
             </div>
         </div>
@@ -83,14 +86,23 @@ while ($row = mysqli_fetch_assoc($result)) {
                             <img src="img/product/<?= $produk['gambar']; ?>" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
-                            style="top: 10px; right: 10px;"><?= $produk['jenis_produk']; ?></div>
+                            style="top: 10px; right: 10px;object-fit:cover;">
+                            <?= $produk['jenis_produk']; ?>
+                        </div>
                         <div class="p-4 pb-0 rounded-bottom">
-                            <h5><?= $produk['nama_produk']; ?></h5>
-                            <p><?= $produk['deskripsi_produk']; ?></p>
+                            <h5>
+                                <?= $produk['nama_produk']; ?>
+                            </h5>
+                            <p>
+                                <?= $produk['deskripsi_produk']; ?>
+                            </p>
                             <div class="d-flex justify-content-between flex-lg-wrap">
-                                <div class="text-dark mt-1">Rp. <?= number_format($produk['harga'], 2, ",", ".") ?></div>
-                                <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>" class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
-                                        class="fa fa-shopping-bag me-2 text-primary"></i>  Buy</a>
+                                <div class="text-dark mt-1">Rp.
+                                    <?= number_format($produk['harga'], 2, ",", ".") ?>
+                                </div>
+                                <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
+                                    class="btn border border-secondary rounded-pill px-3 py-1 mb-4 text-primary"><i
+                                        class="fa fa-shopping-bag me-2 text-primary"></i> Buy</a>
                             </div>
                         </div>
                     </div>
@@ -100,5 +112,10 @@ while ($row = mysqli_fetch_assoc($result)) {
     </div>
 </div>
 <!-- Single Product End -->
+<script>
+    if ( window.history.replaceState ) {
+        window.history.replaceState( null, null, window.location.href );
+    }
+</script>
 
 <?php include("./comp/footer.php"); ?>

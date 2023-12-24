@@ -1,5 +1,8 @@
-<?php include("./comp/header.php"); ?>
+<?php session_start();
+include("./comp/header.php"); ?>
 <?php include("./comp/navbar.php"); ?>
+
+
 
 <!-- Contact Start -->
 <div class="container-fluid contact py-5">

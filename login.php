@@ -92,7 +92,7 @@ if (isset($_POST['submitLogin'])) {
                 <input type="password" name="passwordLogin" placeholder="Enter your password" required>
               </div>
               <div class="button input-box">
-              <input type="submit" name="submitLogin" value="Sumbit" class="border border-secondary rounded-pill">              </div>
+              <input type="submit" name="submitLogin" value="Login" class="border border-secondary rounded-pill">              </div>
               <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
             </div>
           </form>
@@ -114,7 +114,7 @@ if (isset($_POST['submitLogin'])) {
                 <input type="password" name="passwordRegister" placeholder="Enter your password" required>
               </div>
               <div class="button input-box">
-                <input type="submit" name="submitRegister" value="Sumbit" class="border border-secondary rounded-pill">
+                <input type="submit" name="submitRegister" value="Sign Up" class="border border-secondary rounded-pill">
               </div>
               <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
             </div>
