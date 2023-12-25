@@ -44,7 +44,7 @@ if (isset($_POST['submitLogin'])) {
     if (password_verify($password, $row['password'])) {
       if ($row['role'] == 'admin') {
         $_SESSION['login'] = $row['username'];
-        header("Location: ../admin/index.php");
+        header("Location: ./admin/index.php");
         exit;
       }
       if ($row['role'] == 'user') {
