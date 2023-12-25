@@ -1,7 +1,12 @@
 <?php session_start();
 include("./db/conn.php");
 include("./comp/header.php"); ?>
-<?php include("./comp/navbar.php"); ?>
+<?php include("./comp/navbar.php"); 
+if (empty($_SESSION['pesanan']) || !isset($_SESSION['pesanan'])) {
+    echo "<script>alert('Pesanan kosong, Silahkan Pesan dahulu');</script>";
+    echo "<script>location= 'index.php'</script>";
+}
+?>
 
 <!-- Cart Page Start -->
 <div class="container-fluid py-5">
@@ -34,7 +39,7 @@ include("./comp/header.php"); ?>
                             <th scope="row">
                                 <div class="d-flex align-items-center">
                                     <img src="img/product/<?= $rows['gambar'] ?>" class="img-fluid me-5 rounded-circle"
-                                        style="width: 80px; height: 80px;" alt="">
+                                        style="width: 80px; height: 80px;object-fit:cover;" alt="">
                                 </div>
                             </th>
                             <td>
