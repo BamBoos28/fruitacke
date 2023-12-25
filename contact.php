@@ -12,9 +12,7 @@ include("./comp/header.php"); ?>
                 <div class="col-12">
                     <div class="text-center mx-auto" style="max-width: 700px;">
                         <h1 class="text-primary">Kunjungi Toko Kami</h1>
-                        <p class="mb-4">The contact form is currently inactive. Get a functional and working contact
-                            form with Ajax & PHP in a few minutes. Just copy and paste the files, add a little code and
-                            you're done</p>
+                        <p class="mb-4">Dapatkan bakery 100% homemdae dengan kualitas terbaik disini</p>
                     </div>
                 </div>
                 <div class="col-lg-12">
@@ -29,22 +27,22 @@ include("./comp/header.php"); ?>
                     <div class="d-flex p-4 rounded mb-4 bg-white">
                         <i class="fas fa-map-marker-alt fa-2x text-primary me-4"></i>
                         <div>
-                            <h4>Address</h4>
-                            <p class="mb-2">123 Street New York.USA</p>
+                            <h4>Alamat</h4>
+                            <p class="mb-2">l. Dr. Setia Budi No.2B, Pati Kidul, Kec. Pati, Kabupaten Pati, Jawa Tengah 59114</p>
                         </div>
                     </div>
                     <div class="d-flex p-4 rounded mb-4 bg-white">
                         <i class="fas fa-envelope fa-2x text-primary me-4"></i>
                         <div>
-                            <h4>Mail Us</h4>
-                            <p class="mb-2">info@example.com</p>
+                            <h4>Sosial Media</h4>
+                            <p class="mb-2">https://www.instagram.com/joybakerypati/?hl=id</p>
                         </div>
                     </div>
                     <div class="d-flex p-4 rounded bg-white">
                         <i class="fa fa-phone-alt fa-2x text-primary me-4"></i>
                         <div>
-                            <h4>Telephone</h4>
-                            <p class="mb-2">(+012) 3456 7890</p>
+                            <h4>No WhatsApp</h4>
+                            <p class="mb-2">081346222071</p>
                         </div>
                     </div>
                 </div>
