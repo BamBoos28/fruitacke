@@ -46,7 +46,7 @@ if (isset($_POST['tambahPesanan'])) {
             <div class="col">
                 <div class="row g-4">
                     <div class="col-lg-6">
-                        <div class="border">
+                        <div class="">
                             <a href="#">
                                 <img class="w-100" src="img/product/<?= $id_details['gambar']; ?>"
                                     class="img-fluid rounded" alt="Image">
@@ -54,7 +54,7 @@ if (isset($_POST['tambahPesanan'])) {
                         </div>
                     </div>
                     <div action="" class="col-lg-6">
-                        <h4 class="fw-bold mb-3">
+                        <h4 class="fw-bold mb-3" id="namaProduk":>
                             <?= $id_details['nama_produk']; ?>
                         </h4>
                         <p class="mb-3">Katogori:
@@ -128,31 +128,24 @@ if (isset($_POST['tambahPesanan'])) {
     }
 
     $("#addPesanan").click(function () {
-        var productId = $(this).attr("bs-id");
-        var productCount = parseInt($(jumlahProduk).val());
-        console.log(productId);
-        console.log(typeof  productCount);
-
-        // var fullname = "dd";
-        // var dataString = 'fullname=' + fullname;
-
         $.ajax({
-        type: "POST",
-        url: "method/addPesanan.php",
-        data: { 
-            productId: $(this).attr("bs-id"),
-            productCount: parseInt(productCount)
-        },
-        dataType: "json",
-        cache: false,
-        success: function( data ) {
-            Swal.fire({
-            icon: "success",
-            title: "Pesanan Berhasil Ditambah!!!",
-          });
-        }
-   });
-  });
+            type: "POST",
+            url: "method/addPesanan.php",
+            data: {
+                productId: $(this).attr("bs-id"),
+                productCount: parseInt($(jumlahProduk).val())
+            },
+            dataType: "json",
+            cache: false,
+            success: function (data) {
+                Swal.fire({
+                    icon: "success",
+                    title: "Pesanan Ditambah!!!",
+                    text: $(namaProduk).text() + " berjumlah : " + $(jumlahProduk).val(),
+                });
+            }
+        });
+    });
 </script>
 
 <?php include("./comp/footer.php"); ?>
