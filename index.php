@@ -164,8 +164,8 @@ while ($row = mysqli_fetch_assoc($result)) {
 <!-- Banner Section End -->
 <script>
     ScrollReveal().reveal('#feature', { delay: 500 , duration: 1000 });
-    ScrollReveal().reveal('#bestCon', { delay: 500 , duration: 1500 });
-    ScrollReveal().reveal('#best', { delay: 750 , duration: 1500 });
+    ScrollReveal().reveal('#bestCon', { delay: 250 , duration: 1500 });
+    ScrollReveal().reveal('#best', { delay: 100 , duration: 1500 });
 </script>
 
 <?php include("./comp/footer.php"); ?>

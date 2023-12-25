@@ -260,7 +260,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     ScrollReveal().reveal('#bestCon', {duration: 1000 });
     ScrollReveal().reveal('#best', { delay: 250 , duration: 1500 });
     ScrollReveal().reveal('#katalogCon', { delay: 500 , duration: 1000 });
-    ScrollReveal().reveal('#katalog', { delay: 500 , duration: 2000 });
+    ScrollReveal().reveal('#katalog', { delay: 100 , duration: 2000 });
 </script>
 
 <?php include("./comp/footer.php"); ?>
