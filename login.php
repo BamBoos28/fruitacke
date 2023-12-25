@@ -14,7 +14,7 @@ if (isset($_POST['submitRegister'])) {
   if (mysqli_fetch_assoc($result)) {
     echo "<script>
                 alert('Maaf username Sudah Ada');
-                document.location='register.php';
+                document.location='login.php';
             </script>";
     return false;
   }
