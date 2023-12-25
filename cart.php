@@ -54,8 +54,8 @@ if (empty($_SESSION['pesanan']) || !isset($_SESSION['pesanan'])) {
                             </td>
                             <td>
                                 <div class="input-group quantity mt-4" style="width: 100px;">
-                                    <input type="text" class="form-control form-control-sm text-center border-0"
-                                        value="<?= $jumlah ?>">
+                                    <input type="text" class="form-control bg-light form-control-sm text-center border-0"
+                                        value="<?= $jumlah ?>" readonly>
                                 </div>
                             </td>
                             <td>

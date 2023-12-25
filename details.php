@@ -53,7 +53,7 @@ if (isset($_POST['tambahPesanan'])) {
                             </a>
                         </div>
                     </div>
-                    <form action="" class="col-lg-6" method="post">
+                    <div action="" class="col-lg-6">
                         <h4 class="fw-bold mb-3">
                             <?= $id_details['nama_produk']; ?>
                         </h4>
@@ -67,13 +67,23 @@ if (isset($_POST['tambahPesanan'])) {
                             <?= $id_details['deskripsi_produk']; ?>
                         </p>
                         <div class="input-group quantity mb-5" style="width: 100px;">
-                            <input name="jumlahPesanan" type="text"
-                                class="border border-secondary form-control form-control-sm text-center" value="1">
+                            <div class="input-group-btn">
+                                <button class="btn btn-sm btn-minus rounded-circle bg-light border">
+                                    <i class="fa fa-minus"></i>
+                                </button>
+                            </div>
+                            <input type="text" class="form-control form-control-sm text-center border-0" value="1"
+                                id="jumlahProduk">
+                            <div class="input-group-btn">
+                                <button class="btn btn-sm btn-plus rounded-circle bg-light border">
+                                    <i class="fa fa-plus"></i>
+                                </button>
+                            </div>
                         </div>
-                        <a href="#" class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"><i
-                                class="fa fa-shopping-bag me-2 text-primary"></i> <input type="submit"
-                                name="tambahPesanan" value="Buy" class="border border-secondary rounded-pill"></a>
-                    </form>
+                        <div bs-id="<?= $id_details['id_produk']; ?>"
+                            class="btn border border-secondary rounded-pill px-4 py-2 mb-4 text-primary"
+                            id="addPesanan"><i class="fa fa-shopping-bag me-2 text-primary"></i> Buy</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -113,9 +123,33 @@ if (isset($_POST['tambahPesanan'])) {
 </div>
 <!-- Single Product End -->
 <script>
-    if ( window.history.replaceState ) {
-        window.history.replaceState( null, null, window.location.href );
+    if (window.history.replaceState) {
+        window.history.replaceState(null, null, window.location.href);
     }
+
+    $("#addPesanan").click(function () {
+        var productId = $(this).attr("bs-id");
+        var productCount = parseInt($(jumlahProduk).val());
+        console.log(productId);
+        console.log(typeof  productCount);
+
+        // var fullname = "dd";
+        // var dataString = 'fullname=' + fullname;
+
+        $.ajax({
+        type: "POST",
+        url: "method/addPesanan.php",
+        data: { 
+            productId: $(this).attr("bs-id"),
+            productCount: parseInt(productCount)
+        },
+        dataType: "json",
+        cache: false,
+        success: function( data ) {
+             alert(data.response);
+        }
+   });
+  });
 </script>
 
 <?php include("./comp/footer.php"); ?>
