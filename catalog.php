@@ -37,7 +37,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 <div class="container-fluid" style="margin:8em 0 2em 0 ;">
     <div class="container py-5">
         <div class="text-center mx-auto mb-5" style="max-width: 700px;">
-            <h1 class="display-4">Bestseller Products</h1>
+            <h1 class="display-4">Menu Favorit</h1>
         </div>
         <div class="row g-4">
             <?php foreach ($best as $produk): ?>
@@ -96,7 +96,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                         </li>
                         <li class="nav-item">
                             <a class="d-flex m-2 py-2 bg-light rounded-pill" data-bs-toggle="pill" href="#tab-4">
-                                <span class="text-dark" style="width: 130px;">Donut</span>
+                                <span class="text-dark" style="width: 130px;">Donat</span>
                             </a>
                         </li>
                     </ul>

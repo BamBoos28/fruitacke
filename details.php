@@ -23,16 +23,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     }
 }
 
-if (isset($_POST['tambahPesanan'])) {
-    $jumlah_pesanan = $_POST['jumlahPesanan'];
-
-    if (isset($_SESSION['pesanan'][$id_produk])) {
-        $_SESSION['pesanan'][$id_produk] += $jumlah_pesanan;
-    } else {
-        $_SESSION['pesanan'][$id_produk] = $jumlah_pesanan;
-    }
-    echo $_SESSION['pesanan'][$id_produk];
-}
 ?>
 
 
@@ -54,7 +44,7 @@ if (isset($_POST['tambahPesanan'])) {
                         </div>
                     </div>
                     <div action="" class="col-lg-6">
-                        <h4 class="fw-bold mb-3" id="namaProduk":>
+                        <h4 class="fw-bold mb-3" id="namaProduk" :>
                             <?= $id_details['nama_produk']; ?>
                         </h4>
                         <p class="mb-3">Katogori:
@@ -138,11 +128,15 @@ if (isset($_POST['tambahPesanan'])) {
             dataType: "json",
             cache: false,
             success: function (data) {
-                Swal.fire({
-                    icon: "success",
-                    title: "Pesanan Ditambah!!!",
-                    text: $(namaProduk).text() + " berjumlah : " + $(jumlahProduk).val(),
-                });
+                if (data.response == "True") {
+                    Swal.fire({
+                        icon: "success",
+                        title: "Pesanan Ditambah!!!",
+                        text: $(namaProduk).text() + " berjumlah : " + $(jumlahProduk).val(),
+                    });
+                }else{
+                    location.replace("./login.php")
+                }
             }
         });
     });

@@ -147,8 +147,8 @@ while ($row = mysqli_fetch_assoc($result)) {
             <div class="col-lg-6">
                 <div class="py-4">
                     <h1 class="display-3 text-white">Custom Cake</h1>
-                    <p class="fs-5 mb-4 text-dark">Menerima pesanan Custom Cake, hubungi kami.</p>
-                    <a href="#" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
+                    <p class="fs-5 mb-4 text-dark">Menerima pesanan Custom Cake, hubungi CS kami.</p>
+                    <a href="https://api.whatsapp.com/send?phone=6285772052750" target="_blank" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
                 </div>
             </div>
             <div class="col-lg-6">

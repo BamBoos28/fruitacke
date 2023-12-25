@@ -57,23 +57,21 @@ if (isset($_POST['submitLogin'])) {
 }
 ?>
 
+<!-- style="background : url(./img/hero-img.jpg); background-size : cover;" -->
+
 <?php include("./comp/header.php"); ?>
 <div class="w-100 vh-100 bg-light d-flex align-items-center justify-content-center">
   <div class="containerLogin">
     <input type="checkbox" id="flip">
     <div class="cover">
       <div class="front">
-        <img src="frontImg.jpg" alt="">
+        <img src="./img/hero-img-1.jpg" alt="">
         <div class="text">
-          <span class="text-1">Every new friend is a <br> new adventure</span>
-          <span class="text-2">Let's get connected</span>
         </div>
       </div>
       <div class="back">
-        <img class="backImg" src="backImg.jpg" alt="">
+        <img class="backImg" src="./img/hero-img-1.jpg" alt="">
         <div class="text">
-          <span class="text-1">Complete miles of journey <br> with one step</span>
-          <span class="text-2">Let's get started</span>
         </div>
       </div>
     </div>
@@ -92,7 +90,8 @@ if (isset($_POST['submitLogin'])) {
                 <input type="password" name="passwordLogin" placeholder="Enter your password" required>
               </div>
               <div class="button input-box">
-              <input type="submit" name="submitLogin" value="Login" class="border border-secondary rounded-pill">              </div>
+                <input type="submit" name="submitLogin" value="Login" class="border border-secondary rounded-pill">
+              </div>
               <div class="text sign-up-text">Don't have an account? <label for="flip">Sigup now</label></div>
             </div>
           </form>
