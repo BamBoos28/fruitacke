@@ -66,7 +66,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <!-- Featurs Start -->
 <div class="container-fluid service py-5">
-    <div class="container py-5">
+    <div class="container py-5" id="feature">
         <div class="row g-4 justify-content-center">
             <div class="col-md-6 col-lg-4">
                 <div class="service-item rounded border border-secondary bg-primary">
@@ -108,13 +108,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <!-- Bestsaler Product Start -->
 <div class="container-fluid py-5">
-    <div class="container py-5">
+    <div class="container py-5" id="bestCon">
         <div class="text-center mx-auto mb-5" style="max-width: 700px;">
             <h1 class="display-4">Bestseller Products</h1>
         </div>
         <div class="row g-4">
             <?php foreach ($rows as $produk): ?>
-                <div class="col-lg-6 col-xl-4">
+                <div class="col-lg-6 col-xl-4" id="best">
                     <div class="p-4 rounded bg-light">
                         <div class="row align-items-center">
                             <div class="col-6">
@@ -125,11 +125,12 @@ while ($row = mysqli_fetch_assoc($result)) {
                                     <?= $produk['nama_produk']; ?>
                                 </a>
                                 <hr>
-                                <h5 class="mb-3">Rp. <?= number_format($produk['harga'], 2, ",", ".") ?>
+                                <h5 class="mb-3">Rp.
+                                    <?= number_format($produk['harga'], 2, ",", ".") ?>
                                 </h5>
                                 <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>"
                                     class="btn border border-secondary rounded-pill px-3 text-primary"><i
-                                        class="fa fa-shopping-bag me-2 text-primary"></i>  Buy</a>
+                                        class="fa fa-shopping-bag me-2 text-primary"></i> Buy</a>
                             </div>
                         </div>
                     </div>
@@ -148,7 +149,8 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <div class="py-4">
                     <h1 class="display-3 text-white">Custom Cake</h1>
                     <p class="fs-5 mb-4 text-dark">Menerima pesanan Custom Cake, hubungi CS kami.</p>
-                    <a href="https://api.whatsapp.com/send?phone=6285772052750" target="_blank" class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
+                    <a href="https://api.whatsapp.com/send?phone=6285772052750" target="_blank"
+                        class="banner-btn btn border-2 border-white rounded-pill text-dark py-3 px-5">BUY</a>
                 </div>
             </div>
             <div class="col-lg-6">
@@ -160,5 +162,10 @@ while ($row = mysqli_fetch_assoc($result)) {
     </div>
 </div>
 <!-- Banner Section End -->
+<script>
+    ScrollReveal().reveal('#feature', { delay: 500 , duration: 1000 });
+    ScrollReveal().reveal('#bestCon', { delay: 500 , duration: 1500 });
+    ScrollReveal().reveal('#best', { delay: 750 , duration: 1500 });
+</script>
 
 <?php include("./comp/footer.php"); ?>

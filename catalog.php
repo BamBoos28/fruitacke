@@ -35,13 +35,13 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <!-- Bestsaler Product Start -->
 <div class="container-fluid" style="margin:8em 0 2em 0 ;">
-    <div class="container py-5">
+    <div class="container py-5" id="bestCon">
         <div class="text-center mx-auto mb-5" style="max-width: 700px;">
             <h1 class="display-4">Menu Favorit</h1>
         </div>
         <div class="row g-4">
             <?php foreach ($best as $produk): ?>
-                <div class="col-lg-6 col-xl-4">
+                <div class="col-lg-6 col-xl-4" id="best">
                     <div class="p-4 rounded bg-light">
                         <div class="row align-items-center">
                             <div class="col-6">
@@ -71,7 +71,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 <!-- Fruits Shop Start-->
 <div class="container-fluid fruite py-5">
-    <div class="container py-5">
+    <div class="container py-5" id="katalogCon">
         <div class="tab-class text-center">
             <div class="row g-4">
                 <div class="col-lg-4 text-start">
@@ -108,7 +108,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                         <div class="col-lg-12">
                             <div class="row g-4">
                                 <?php foreach ($all as $produk): ?>
-                                    <div class="col-md-6 col-lg-4 col-xl-3">
+                                    <div class="col-md-6 col-lg-4 col-xl-3" id="katalog">
                                         <div class="rounded position-relative fruite-item">
                                             <div class="fruite-img border border-secondary">
                                                 <img src="img/product/<?= $produk['gambar']; ?>"
@@ -255,5 +255,12 @@ while ($row = mysqli_fetch_assoc($result)) {
     </div>
 </div>
 <!-- Fruits Shop End-->
+
+<script>
+    ScrollReveal().reveal('#bestCon', {duration: 1000 });
+    ScrollReveal().reveal('#best', { delay: 250 , duration: 1500 });
+    ScrollReveal().reveal('#katalogCon', { delay: 500 , duration: 1000 });
+    ScrollReveal().reveal('#katalog', { delay: 500 , duration: 2000 });
+</script>
 
 <?php include("./comp/footer.php"); ?>
