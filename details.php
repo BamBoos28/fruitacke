@@ -46,7 +46,7 @@ if (isset($_POST['tambahPesanan'])) {
             <div class="col">
                 <div class="row g-4">
                     <div class="col-lg-6">
-                        <div class="border rounded">
+                        <div class="border">
                             <a href="#">
                                 <img class="w-100" src="img/product/<?= $id_details['gambar']; ?>"
                                     class="img-fluid rounded" alt="Image">
@@ -146,7 +146,10 @@ if (isset($_POST['tambahPesanan'])) {
         dataType: "json",
         cache: false,
         success: function( data ) {
-             alert(data.response);
+            Swal.fire({
+            icon: "success",
+            title: "Pesanan Berhasil Ditambah!!!",
+          });
         }
    });
   });
