@@ -10,18 +10,18 @@ if (mysqli_num_rows($result) === 1) {
     // cek password 
     $row = mysqli_fetch_assoc($result);
     if (password_verify($password, $row['password'])) {
+        $_SESSION['login'] = $row['username'];
         if ($row['role'] == 'admin') {
-            $_SESSION['login'] = $row['username'];
+            echo json_encode([
+                'response' => 'Admin'
+            ]);
+            exit;
         }
-        if ($row['role'] == 'user') {
-            $_SESSION['login'] = $row['username'];
-        }
+        echo json_encode([
+            'response' => 'True'
+        ]);
+        exit;
     }
-
-    echo json_encode([
-        'response' => 'True'
-    ]);
-    exit;
 }
 echo json_encode([
     'response' => 'False'

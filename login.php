@@ -87,7 +87,15 @@ session_start();
       dataType: "json",
       cache: false,
       success: function (data) {
-        if (data.response == "True") {
+        if (data.response == "Admin") {
+          Swal.fire({
+            icon: "success",
+            title: "Login Admin Berhasil",
+            text: "Menuju catalog admin",
+          }).then(function () {
+            location.replace("./admin/index.php");
+          });
+        }else if (data.response == "True") {
           Swal.fire({
             icon: "success",
             title: "Login Berhasil",

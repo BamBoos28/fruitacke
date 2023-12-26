@@ -33,8 +33,10 @@
                         </a>
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
                             <?php if (isset($_SESSION['login'])): ?>
-                                <a href="cart.php" class="dropdown-item text-primary disabled"><?= $_SESSION['login']; ?></a>
-                                <a href="./method/logout.php" class="dropdown-item">Log Out</a>
+                                <a href="cart.php" class="dropdown-item text-primary disabled">
+                                    <?= $_SESSION['login']; ?>
+                                </a>
+                                <div id="logoutButton" class="dropdown-item">Log Out</div>
                             <?php else: ?>
                                 <a href="login.php" class="dropdown-item">Login</a>
                             <?php endif; ?>
@@ -45,3 +47,37 @@
         </nav>
     </div>
 </div>
+
+<script>
+    $("#logoutButton").click(function () {
+        Swal.fire({
+            title: "Apakah anda ingin logout?",
+            text: "tekan iya untuk logout",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Iya",
+            cancelButtonText: "Tidak",
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire({
+                    title: "Logout berhasil",
+                    text: "Terima kasih telah berbelanja",
+                    icon: "success"
+                }).then(function () {
+                    $.ajax({
+                        type: "POST",
+                        url: "method/logout.php",
+                        data: {
+                        },
+                        dataType: "json",
+                        cache: false,
+                        success: function (data) {}
+                    });
+                    location.reload();
+                });
+            }
+        });
+    })
+</script>
