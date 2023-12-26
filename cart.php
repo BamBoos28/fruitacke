@@ -73,33 +73,6 @@ include("./comp/header.php"); ?>
                                 </tr>
                                 <?php $totalBelanja += $subHarga ?>
                             <?php endforeach; ?>
-                        <?php else: ?>
-                            <tr>
-                                <th scope="row">
-                                    <div class="d-flex align-items-center">
-                                        <img src="img/product/blank.png" class="img-fluid me-5 rounded-circle"
-                                            style="width: 80px; height: 80px;object-fit:cover;" alt="">
-                                    </div>
-                                </th>
-                                <td>
-                                    <p class="mb-0 mt-4">
-                                    </p>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">
-                                    </p>
-                                </td>
-                                <td>
-                                    <div class="input-group quantity mt-4" style="width: 100px;">
-                                    </div>
-                                </td>
-                                <td>
-                                    <p class="mb-0 mt-4">
-                                    </p>
-                                </td>
-                                <td>
-                                </td>
-                            </tr>
                         <?php endif; ?>
                     <?php endif; ?>
                 </tbody>
@@ -119,7 +92,7 @@ include("./comp/header.php"); ?>
                         </p>
                     </div>
                     <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4"
-                        type="button">Proceed Checkout</button>
+                        type="button"><a href="checkout.php">Proceed Checkout</a></button>
                 </div>
             </div>
         </div>

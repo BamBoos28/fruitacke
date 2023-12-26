@@ -34,7 +34,7 @@
                         <div class="dropdown-menu m-0 bg-secondary rounded-0">
                             <?php if (isset($_SESSION['login'])): ?>
                                 <a href="cart.php" class="dropdown-item text-primary disabled"><?= $_SESSION['login']; ?></a>
-                                <a href="logout.php" class="dropdown-item">Log Out</a>
+                                <a href="./method/logout.php" class="dropdown-item">Log Out</a>
                             <?php else: ?>
                                 <a href="login.php" class="dropdown-item">Login</a>
                             <?php endif; ?>

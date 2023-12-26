@@ -113,10 +113,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 </div>
 <!-- Single Product End -->
 <script>
-    if (window.history.replaceState) {
-        window.history.replaceState(null, null, window.location.href);
-    }
-
     $("#addPesanan").click(function () {
         $.ajax({
             type: "POST",
