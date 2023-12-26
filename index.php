@@ -118,7 +118,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class="p-4 rounded bg-light">
                         <div class="row align-items-center">
                             <div class="col-6">
-                                <img src="img/product/<?= $produk['gambar']; ?>" class="img-fluid rounded w-100" alt="">
+                                <img src="admin/asset/img/produk/<?= $produk['gambar']; ?>" class="img-fluid rounded w-100" alt="">
                             </div>
                             <div class="col-6">
                                 <a href="./details.php?id_produk=<?= $produk['id_produk']; ?>" class="h5">

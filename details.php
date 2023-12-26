@@ -38,7 +38,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                     <div class="col-lg-6">
                         <div class="">
                             <a href="#">
-                                <img class="w-100" src="img/product/<?= $id_details['gambar']; ?>"
+                                <img class="w-100" src="admin/asset/img/produk/<?= $id_details['gambar']; ?>"
                                     class="img-fluid rounded" alt="Image">
                             </a>
                         </div>
@@ -83,7 +83,7 @@ while ($row = mysqli_fetch_assoc($result)) {
                 <?php foreach ($rows as $produk): ?>
                     <div class="border border-primary rounded position-relative vesitable-item">
                         <div class="vesitable-img">
-                            <img src="img/product/<?= $produk['gambar']; ?>" class="img-fluid w-100 rounded-top" alt="">
+                            <img src="admin/asset/img/produk/<?= $produk['gambar']; ?>" class="img-fluid w-100 rounded-top" alt="">
                         </div>
                         <div class="text-white bg-primary px-3 py-1 rounded position-absolute"
                             style="top: 10px; right: 10px;object-fit:cover;">

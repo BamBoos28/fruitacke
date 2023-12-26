@@ -39,7 +39,7 @@ include("./comp/header.php"); ?>
                                 <tr>
                                     <th scope="row">
                                         <div class="d-flex align-items-center">
-                                            <img src="img/product/<?= $rows['gambar'] ?>" class="img-fluid me-5 rounded-circle"
+                                            <img src="admin/asset/img/produk/<?= $rows['gambar'] ?>" class="img-fluid me-5 rounded-circle"
                                                 style="width: 80px; height: 80px;object-fit:cover;" alt="">
                                         </div>
                                     </th>
