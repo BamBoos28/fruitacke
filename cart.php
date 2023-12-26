@@ -92,7 +92,7 @@ include("./comp/header.php"); ?>
                         </p>
                     </div>
                     <button class="btn border-secondary rounded-pill px-4 py-3 text-primary text-uppercase mb-4 ms-4"
-                        type="button"><a href="checkout.php">Proceed Checkout</a></button>
+                        type="button" id="checkoutPage" bs-total="<?= $totalBelanja ?>">Proceed Checkout</button>
                 </div>
             </div>
         </div>
@@ -121,6 +121,18 @@ include("./comp/header.php"); ?>
             }
         });
     }
+
+    $("#checkoutPage").click(function () {
+        if ($(this).attr("bs-total") == 0) {
+            Swal.fire({
+                icon: "error",
+                title: "Pesanan Kosong!!!",
+                text: "Pesan Makanan dahulu sebelum melanjutkan transaksi",
+            });
+        }else{
+            location.replace("./checkout.php")
+        }
+    });
 </script>
 
 <?php include("./comp/footer.php"); ?>

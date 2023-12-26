@@ -1,4 +1,6 @@
-<?php include("./comp/header.php"); ?>
+<?php
+session_start(); 
+include("./comp/header.php"); ?>
 <?php include("./comp/navbar.php"); ?>
 
 <!-- Checkout Page Start -->
