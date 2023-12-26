@@ -55,8 +55,8 @@
             text: "tekan iya untuk logout",
             icon: "warning",
             showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
+            confirmButtonColor: "#dc3545",
+            cancelButtonColor: "#81c408",
             confirmButtonText: "Iya",
             cancelButtonText: "Tidak",
         }).then((result) => {
