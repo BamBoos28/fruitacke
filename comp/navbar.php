@@ -36,9 +36,9 @@
                                 <a href="cart.php" class="dropdown-item text-primary disabled">
                                     <?= $_SESSION['login']; ?>
                                 </a>
-                                <div id="logoutButton" class="dropdown-item">Log Out</div>
+                                <div id="logoutButton" class="dropdown-item" style="cursor:pointer;">Log Out</div>
                             <?php else: ?>
-                                <a href="login.php" class="dropdown-item">Login</a>
+                                <a href="login.php" class="dropdown-item" style="cursor:pointer;">Login</a>
                             <?php endif; ?>
                         </div>
                     </div>
