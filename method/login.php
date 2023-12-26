@@ -12,16 +12,19 @@ if (mysqli_num_rows($result) === 1) {
     if (password_verify($password, $row['password'])) {
         if ($row['role'] == 'admin') {
             $_SESSION['login'] = $row['username'];
-            exit;
         }
         if ($row['role'] == 'user') {
             $_SESSION['login'] = $row['username'];
-            exit;
         }
     }
-}
 
+    echo json_encode([
+        'response' => 'True'
+    ]);
+    exit;
+}
 echo json_encode([
-    'response' => 'True'
+    'response' => 'False'
 ]);
+
 ?>
