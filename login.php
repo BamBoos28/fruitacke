@@ -30,11 +30,11 @@ session_start();
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" id="usernameLogin" placeholder="Enter your username" required>
+                <input type="text" id="usernameLogin" placeholder="Masukkan username" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" id="passwordLogin" placeholder="Enter your password" required>
+                <input type="password" id="passwordLogin" placeholder="Masukkan password" required>
               </div>
               <div id="submitLogin" class="buttonOnLogin mt-4 w-100 input-box border border-secondary rounded-pill"
                 style="">
@@ -50,15 +50,15 @@ session_start();
             <div class="input-boxes">
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" id="nameRegister" placeholder="Enter your name" required>
+                <input type="text" id="nameRegister" placeholder="Masukkan nama" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" id="usernameRegister" placeholder="Enter your username" required>
+                <input type="text" id="usernameRegister" placeholder="Masukkan username" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" id="passwordRegister" placeholder="Enter your password" required>
+                <input type="password" id="passwordRegister" placeholder="Masukkan password" required>
               </div>
               <div id="submitRegister" class="buttonOnLogin mt-4 w-100 input-box border border-secondary rounded-pill"
                 style="">
@@ -136,6 +136,12 @@ session_start();
           }
         }
       });
+    } else {
+      Swal.fire({
+        icon: "error",
+        title: "Registrasi Gagal",
+        text: "Masukkan username,nama,dan password",
+      })
     }
   });
 </script>
