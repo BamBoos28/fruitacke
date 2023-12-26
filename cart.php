@@ -84,6 +84,14 @@ include("./comp/header.php"); ?>
                 <div class="bg-light rounded">
                     <div class="p-4">
                         <h1 class="display-6 mb-4">Total <span class="fw-normal">Belanjaan</span></h1>
+                        <div class="d-flex justify-content-between">
+                            <h5 class="mb-0 me-4">Bayar</h5>
+                            <div class="">
+                                <p class="mb-0"> <input type="number"
+                                        class="form-control bg-light form-control-sm text-center border-0"
+                                        id="hargaBayar" value="0"></p>
+                            </div>
+                        </div>
                     </div>
                     <div class="py-4 mb-4 border-top border-bottom d-flex justify-content-between">
                         <h5 class="mb-0 ps-4 me-4">Total</h5>
@@ -129,8 +137,34 @@ include("./comp/header.php"); ?>
                 title: "Pesanan Kosong!!!",
                 text: "Pesan Makanan dahulu sebelum melanjutkan transaksi",
             });
-        }else{
-            location.replace("./checkout.php")
+        } else {
+            if ($("#hargaBayar").val() >= $(this).attr("bs-total")) {
+                $.ajax({
+                    type: "POST",
+                    url: "method/buyPesanan.php",
+                    data: {
+                        totalBayar: parseInt($("#hargaBayar").val()),
+                        totalBelanja: parseInt($(this).attr("bs-total"))
+                    },
+                    dataType: "json",
+                    cache: false,
+                    success: function (data) {
+                        Swal.fire({
+                            icon: "success",
+                            title: "Pesanan Berhasil",
+                            text: "Terima Kasih Telah Berbelanja Disini",
+                        }).then((result) => {
+                            location.reload();
+                        });
+                    }
+                });
+            } else {
+                Swal.fire({
+                    icon: "error",
+                    title: "Jumlah Bayar Salah!!!",
+                    text: "Masukkan Jumlah nominal yang benar",
+                });
+            }
         }
     });
 </script>

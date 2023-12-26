@@ -26,11 +26,11 @@ foreach ($rows as $role) {
 }
 
 if (!isset($_SESSION['login'])) {
-    header("Location: ../login/login.php");
+    header("Location: ../login.php");
 }
 if (isset($_SESSION['login'])) {
     if ($role != 'admin') {
-        header("Location: ../user/index.php");
+        header("Location: ../index.php");
     }
 }
 ?>

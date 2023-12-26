@@ -6,8 +6,8 @@ include("./comp/header.php"); ?>
 <!-- Checkout Page Start -->
 <div class="container-fluid py-5">
     <div class="container py-5">
-        <h1 class="mb-4">Billing details</h1>
-        <form action="#">
+        <h1 class="mb-4">Detail Pemesanan</h1>
+        <form >
             <div class="row g-5">
                 <div class="col-md-12 col-lg-6 col-xl-7">
                     <div class="row">
